@@ -102,6 +102,7 @@ func TestNewURLResource(t *testing.T) {
 }
 
 func TestGitResource(t *testing.T) {
+	t.Skip("not testing github resource at the moment ")
 	if testing.Short() {
 		t.Skip("skipping GIT resource test in short mode")
 	}
