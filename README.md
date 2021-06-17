@@ -1,10 +1,10 @@
+This is the TES fork of grule
 
-[![Gopheer Holds The Rule](https://github.com/tespkg/grule/blob/master/gopher-grule.png?raw=true)](https://github.com/tespkg/grule/blob/master/gopher-grule.png?raw=true)
+Major & Minor version will track the original, but you should add `100` to the minor version. E.g.
 
-[![Build Status](https://travis-ci.org/hyperjumptech/grule-rule-engine.svg?branch=master)](https://travis-ci.org/hyperjumptech/grule-rule-engine)
-[![Build Status](https://circleci.com/gh/hyperjumptech/grule-rule-engine.svg?style=svg)](https://circleci.com/gh/hyperjumptech/grule-rule-engine)
-[![Go Report Card](https://goreportcard.com/badge/github.com/tespkg/grule)](https://goreportcard.com/report/github.com/tespkg/grule)
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+Upstream `github.com/hyperjumptech/grule-rule-engine@v1.9.1` becomes `github.com/tespkg/grule@v1.109.1`
+
+**Original README Below**
 
 __"Gopher Holds The Rules"__
 
