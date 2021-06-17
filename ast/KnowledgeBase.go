@@ -23,7 +23,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/hyperjumptech/grule-rule-engine/pkg"
+	"github.com/tespkg/grule/pkg"
 )
 
 // NewKnowledgeLibrary create a new instance KnowledgeLibrary
@@ -64,7 +64,7 @@ func (lib *KnowledgeLibrary) LoadKnowledgeBaseFromReader(reader io.Reader, overw
 	defer func() {
 		if r := recover(); r != nil {
 			retKb = nil
-			logrus.Panicf("panic recovered during LoadKnowledgeBaseFromReader. send us your report to https://github.com/hyperjumptech/grule-rule-engine/issues")
+			logrus.Panicf("panic recovered during LoadKnowledgeBaseFromReader. send us your report to https://github.com/tespkg/grule/issues")
 		}
 	}()
 

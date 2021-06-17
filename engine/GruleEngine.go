@@ -17,8 +17,8 @@ package engine
 import (
 	"context"
 	"fmt"
-	"github.com/hyperjumptech/grule-rule-engine/ast"
-	"github.com/hyperjumptech/grule-rule-engine/logger"
+	"github.com/tespkg/grule/ast"
+	"github.com/tespkg/grule/logger"
 	"sort"
 	"time"
 

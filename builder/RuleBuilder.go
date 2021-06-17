@@ -16,15 +16,15 @@ package builder
 
 import (
 	"fmt"
-	"github.com/hyperjumptech/grule-rule-engine/ast"
-	"github.com/hyperjumptech/grule-rule-engine/logger"
+	"github.com/tespkg/grule/ast"
+	"github.com/tespkg/grule/logger"
 	"github.com/sirupsen/logrus"
 	"time"
 
 	"github.com/antlr/antlr4/runtime/Go/antlr"
-	antlr2 "github.com/hyperjumptech/grule-rule-engine/antlr"
-	parser "github.com/hyperjumptech/grule-rule-engine/antlr/parser/grulev3"
-	"github.com/hyperjumptech/grule-rule-engine/pkg"
+	antlr2 "github.com/tespkg/grule/antlr"
+	parser "github.com/tespkg/grule/antlr/parser/grulev3"
+	"github.com/tespkg/grule/pkg"
 )
 
 var (

@@ -16,8 +16,8 @@ package ast
 
 import (
 	"fmt"
-	"github.com/hyperjumptech/grule-rule-engine/ast/unique"
-	"github.com/hyperjumptech/grule-rule-engine/pkg"
+	"github.com/tespkg/grule/ast/unique"
+	"github.com/tespkg/grule/pkg"
 	"github.com/sirupsen/logrus"
 	"strings"
 	"time"

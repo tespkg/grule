@@ -16,7 +16,7 @@ package pkg
 
 import (
 	"fmt"
-	"github.com/hyperjumptech/grule-rule-engine/logger"
+	"github.com/tespkg/grule/logger"
 	"io"
 	"io/ioutil"
 	"net/http"
