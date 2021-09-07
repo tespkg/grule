@@ -22,7 +22,7 @@ import (
 	"strings"
 
 	"github.com/bmatcuk/doublestar"
-	"github.com/hyperjumptech/grule-rule-engine/logger"
+	"github.com/tespkg/grule/logger"
 )
 
 // EmbeddedResource is a struct that will load an embedded file from an embed.FS struct.
