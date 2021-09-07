@@ -4,6 +4,12 @@ Major & Minor version will track the original, but you should add `100` to the m
 
 Upstream `github.com/hyperjumptech/grule-rule-engine@v1.9.1` becomes `github.com/tespkg/grule@v1.109.1`
 
+Change package import using:
+
+```shell
+find . -type f -iname '*.go' -exec sed -i 's#github.com/hyperjumptech/grule-rule-engine#github.com/tespkg/grule#' {} \;
+```
+
 **Original README Below**
 
 __"Gopher Holds The Rules"__
