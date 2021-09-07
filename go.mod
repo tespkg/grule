@@ -1,6 +1,6 @@
 module github.com/tespkg/grule
 
-go 1.13
+go 1.16
 
 require (
 	github.com/antlr/antlr4 v0.0.0-20200801005519-2ba38605b949
