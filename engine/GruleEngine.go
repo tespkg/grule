@@ -17,12 +17,12 @@ package engine
 import (
 	"context"
 	"fmt"
-	"github.com/tespkg/grule/ast"
-	"github.com/tespkg/grule/logger"
 	"sort"
 	"time"
 
 	"github.com/sirupsen/logrus"
+	"github.com/tespkg/grule/ast"
+	"github.com/tespkg/grule/logger"
 )
 
 var (
@@ -78,10 +78,22 @@ func (g *GruleEngine) notifyBeginCycle(cycle uint64) {
 	}
 }
 
+type ExecuteOptions struct {
+	// AutoRetract retract the rule after it's true evaluation
+	AutoRetract bool
+}
+
 // ExecuteWithContext function will execute a knowledge evaluation and action against data context.
 // The engine will evaluate context cancelation status in each cycle.
 // The engine also do conflict resolution of which rule to execute.
 func (g *GruleEngine) ExecuteWithContext(ctx context.Context, dataCtx ast.IDataContext, knowledge *ast.KnowledgeBase) error {
+	return g.ExecuteWithContextOptions(ctx, dataCtx, knowledge, ExecuteOptions{})
+}
+
+// ExecuteWithContext function will execute a knowledge evaluation and action against data context.
+// The engine will evaluate context cancelation status in each cycle.
+// The engine also do conflict resolution of which rule to execute.
+func (g *GruleEngine) ExecuteWithContextOptions(ctx context.Context, dataCtx ast.IDataContext, knowledge *ast.KnowledgeBase, options ExecuteOptions) error {
 	log.Debugf("Starting rule execution using knowledge '%s' version %s. Contains %d rule entries", knowledge.Name, knowledge.Version, len(knowledge.RuleEntries))
 
 	// Prepare the timer, we need to measure the processing time in debug mode.
@@ -131,6 +143,9 @@ func (g *GruleEngine) ExecuteWithContext(ctx context.Context, dataCtx ast.IDataC
 				}
 				// if can, add into runnable array
 				if can {
+					if options.AutoRetract {
+						knowledge.RetractRule(v.RuleName)
+					}
 					runnable = append(runnable, v)
 				}
 				// notify all listeners that a rule's when scope is been evaluated.
